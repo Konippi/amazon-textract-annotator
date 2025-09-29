@@ -1,0 +1,1 @@
+"""Textract Document Annotator package."""

@@ -1,0 +1,53 @@
+[project]
+name = "amazon-textract-annotator"
+version = "0.1.0"
+description = "Amazon Textract Annotator"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "boto3>=1.40.40",
+    "click>=8.3.0",
+    "pillow>=11.3.0",
+    "pymupdf>=1.23.0",
+]
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.405",
+    "ruff>=0.13.2",
+]
+
+[project.scripts]
+"app" = "amazon_textract_annotator.app:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/amazon_textract_annotator"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.ruff]
+line-length = 120
+include = ["src/**/*.py"]
+
+[tool.ruff.lint]
+select = [
+  "B",   # flake8-bugbear
+  "D",   # pydocstyle
+  "E",   # pycodestyle
+  "F",   # pyflakes
+  "G",   # logging format
+  "I",   # isort
+  "LOG", # logging
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["D"]
+"!src/**/*.py" = ["D"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
