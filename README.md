@@ -1,6 +1,6 @@
 # Amazon Textract Annotator
 
-A Python CLI tool that uses Amazon Textract to detect text in documents and images, then annotates them with red bounding boxes around detected text areas.
+The app that uses Amazon Textract to detect text in documents and images, then annotates them with red bounding boxes around detected text areas.
 
 <img width="500" height="700" alt="Image" src="https://github.com/user-attachments/assets/e00887b0-a736-42fa-9334-47eee27dfc56" />
 
